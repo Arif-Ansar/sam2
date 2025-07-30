@@ -3,7 +3,11 @@ module "resource_group"{
     resource_group_location = "centralindia"
     resource_group_name = "tikks1"
 }
-
+module "resource_group2"{
+    source = "../modules/azurerm_resource_group"
+    resource_group_location = "centralindia"
+    resource_group_name = "tikks3"
+}
 module "virtual_network"{
     depends_on = [module.resource_group]
     source = "../modules/azurerm_virtual_network"
