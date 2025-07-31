@@ -8,6 +8,11 @@ module "resource_group2"{
     resource_group_location = "centralindia"
     resource_group_name = "tikks3"
 }
+module "resource_group3"{
+    source = "../modules/azurerm_resource_group"
+    resource_group_location = "centralindia"
+    resource_group_name = "rg-canada"
+}
 module "resource_group1"{
     source = "../modules/azurerm_resource_group"
     resource_group_location = "centralindia"
